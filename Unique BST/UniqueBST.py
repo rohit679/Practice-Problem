@@ -17,7 +17,7 @@ def uniqueBST():
         while j<=i-1:
             count+=(l[j]*l[i-j-1])
             j+=1
-            l[i]=count
+        l[i]=count
     return l[n]
 
 def main():
