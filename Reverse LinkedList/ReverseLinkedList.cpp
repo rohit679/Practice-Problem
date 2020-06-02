@@ -16,15 +16,18 @@ void add(int a)
 {
   ListNode *temp=new ListNode(a);
   ListNode* temp1=start;
-  if(start!=NULL)
+  if(start==NULL)
   {
     start=temp;
   }
-  while(temp1->next!=NULL)
+  else
   {
-    temp1=temp1->next;
+    while(temp1->next!=NULL)
+    {
+      temp1=temp1->next;
+    }
+    temp1->next=temp;
   }
-  temp1->next=temp;
 }
 
 ListNode* reverseList(ListNode* head)
